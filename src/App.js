@@ -5,10 +5,25 @@ import SignUp from './components/SignUp'
 import Sidebar from './components/Sidebar'
 import Table from './components/table'
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Redirect,
+  BrowserRouter,
+} from "react-router-dom";
+
 function App() {
   return (
     <div>
-    <Table></Table>
+    <Router>
+    <Routes>
+    <Route exact path = '/' element={<SignIn />}/>
+    <Route path = '/SignUp' element={<SignUp />} />
+    <Route path = '/SignIn' element={<SignIn />} />
+ </Routes>
+    
+    </Router>
     </div>
    
   );
