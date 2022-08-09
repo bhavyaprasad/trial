@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from "react-router-dom";
+
 
 function Copyright(props) {
   return (
@@ -37,6 +39,12 @@ export default function SignIn() {
       password: data.get('password'),
     });
   };
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/table`; 
+    navigate(path);
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -86,8 +94,8 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
+              onClick = {routeChange}
+            > Sign In
             </Button>
             <Grid container>
               <Grid item xs>
