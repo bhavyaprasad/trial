@@ -1,7 +1,7 @@
 import React from "react";
 import BootstrapTable from "react-bootstrap-table-next";
 import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
-import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 import { Button } from "react-bootstrap";
 
 const { SearchBar } = Search;
